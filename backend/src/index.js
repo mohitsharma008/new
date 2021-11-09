@@ -1,8 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const config = require("config");
+const cors = require("cors");
 const app = express();
 app.use(express.json({ extended: false }));
+app.use(cors());
 const mongoURL =
   "mongodb+srv://andrewnode:andrewnode@cluster0.xc1ft.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose
